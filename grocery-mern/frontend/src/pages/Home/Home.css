@@ -1,0 +1,137 @@
+.home { overflow-x: hidden; }
+
+.hero {
+  background: linear-gradient(135deg, #e8f5ee 0%, #d1fae5 50%, #f0fdf4 100%);
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-content { flex: 1; }
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  color: var(--primary);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  line-height: 1.15;
+  color: var(--gray-800);
+  margin-bottom: 16px;
+}
+.hero-title span { color: var(--primary); }
+.hero-subtitle { font-size: 1.05rem; color: var(--gray-600); margin-bottom: 28px; max-width: 440px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+.hero-stats {
+  display: flex;
+  gap: 32px;
+}
+.hero-stats div { display: flex; flex-direction: column; }
+.hero-stats strong { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+.hero-stats span { font-size: 13px; color: var(--gray-400); }
+
+.hero-image { flex: 1; display: flex; justify-content: center; }
+.hero-img-placeholder {
+  width: 380px;
+  height: 380px;
+  background: white;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  font-size: 52px;
+  box-shadow: var(--shadow-lg);
+}
+
+.benefits { background: white; border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100); padding: 20px 0; }
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+}
+.benefit-icon { font-size: 28px; flex-shrink: 0; }
+.benefit-item strong { display: block; font-size: 14px; font-weight: 700; }
+.benefit-item p { font-size: 13px; color: var(--gray-400); margin: 0; }
+
+.section { padding: 48px 0; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.see-all { color: var(--primary); text-decoration: none; font-size: 14px; font-weight: 600; }
+.see-all:hover { text-decoration: underline; }
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 14px;
+}
+.category-card {
+  background: white;
+  border: 1.5px solid var(--gray-100);
+  border-radius: var(--radius);
+  padding: 18px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.category-card:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.cat-icon { font-size: 30px; }
+.cat-icon img { width: 36px; height: 36px; object-fit: cover; border-radius: 50%; }
+.cat-name { font-size: 12px; font-weight: 600; text-align: center; color: var(--gray-800); }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.promo-banner {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: var(--radius);
+  padding: 48px 40px;
+  margin-bottom: 48px;
+  text-align: center;
+  color: white;
+}
+.promo-banner h2 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
+.promo-banner p { font-size: 1.1rem; margin-bottom: 24px; opacity: 0.9; }
+
+@media (max-width: 1024px) {
+  .categories-grid { grid-template-columns: repeat(4, 1fr); }
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .hero { flex-direction: column; padding: 40px 20px; min-height: auto; }
+  .hero-image { display: none; }
+  .hero-title { font-size: 2.2rem; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .categories-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 480px) {
+  .products-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .categories-grid { grid-template-columns: repeat(3, 1fr); }
+}
