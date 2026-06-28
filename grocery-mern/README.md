@@ -87,23 +87,7 @@ Create your `.env` file:
 cp .env.example .env
 ```
 
-Edit `.env` with your credentials:
-```env
-PORT=5000
-MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/groceryDB
-JWT_SECRET=any_long_random_secret_key_here
 
-# Cloudinary (get from cloudinary.com dashboard)
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-
-# Razorpay (get from razorpay.com dashboard)
-RAZORPAY_KEY_ID=rzp_test_xxxxxxxxxx
-RAZORPAY_KEY_SECRET=your_razorpay_secret
-
-# Stripe (optional)
-STRIPE_SECRET_KEY=sk_test_xxxxxxxxxx
 
 FRONTEND_URL=http://localhost:3000
 ```
@@ -131,12 +115,7 @@ Create your `.env` file:
 cp .env.example .env
 ```
 
-Edit `.env`:
-```env
-REACT_APP_API_URL=http://localhost:5000/api
-REACT_APP_RAZORPAY_KEY_ID=rzp_test_xxxxxxxxxx
-REACT_APP_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxx
-```
+
 
 Start frontend:
 ```bash
@@ -147,13 +126,6 @@ Frontend runs on → http://localhost:3000
 
 ---
 
-### Step 4 — Create Admin Account
-
-1. Register normally at http://localhost:3000/register
-2. Open MongoDB Atlas → your cluster → `groceryDB` → `users` collection
-3. Find your user and change `"role": "user"` → `"role": "admin"`
-4. Save and login again
-5. You'll see **Admin Panel** in the dropdown menu
 
 ---
 
